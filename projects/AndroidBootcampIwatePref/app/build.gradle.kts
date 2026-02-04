@@ -49,6 +49,9 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+
+
 }
 
 dependencies {
@@ -63,6 +66,7 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.androidx.espresso.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -70,4 +74,13 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+    implementation("androidx.datastore:datastore-preferences:1.1.0")
+    // Kotlin coroutines（Flow を使うため）
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+
+
+
+
 }
